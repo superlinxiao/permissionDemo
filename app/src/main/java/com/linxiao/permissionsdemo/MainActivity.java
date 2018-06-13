@@ -23,6 +23,10 @@ import android.widget.Toast;
  *
  * ps：可以根据相应需求，添加对不再提示按钮的判断
  *
+ * shouldShowRequestPermissionRationale在两种情况下会返回false。
+ * 1.用户第一次发起请求
+ * 2.用户点击了不再提示按钮后
+ *
  */
 public class MainActivity extends AppCompatActivity {
 
