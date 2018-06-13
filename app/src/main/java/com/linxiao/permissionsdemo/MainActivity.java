@@ -54,11 +54,7 @@ public class MainActivity extends AppCompatActivity {
         for (String permission : permissions) {
             if (ContextCompat.checkSelfPermission(this, permission) != PackageManager.PERMISSION_GRANTED) {
                 isAllGranted =  false;
-                //检查是否有不再提示，有的话直接弹框,方法结束
-                if (!ActivityCompat.shouldShowRequestPermissionRationale(this, permission)) {
-                    openAppDetails();
-                    return;
-                }
+                break;
             }
         }
         // 如果这3个权限全都拥有, 则直接执行备份代码
